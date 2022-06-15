@@ -1,0 +1,7 @@
+
+.usermotto {
+  width: 100vw;
+  padding-top: 200px;
+  background: #e1e1e1;
+  text-align: center;
+}
