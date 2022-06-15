@@ -1,4 +1,4 @@
-import { Canvas } from '@antv/f2';
+const { Canvas } = require('@antv/f2');
 
 function wrapEvent(e) {
   if (!e) return;
@@ -94,8 +94,8 @@ Component({
       // event.touches = [e.detail];
       // 修改建议，将 x，y 均减去距离顶部距离，这样就能和 f2 内 x，y 对齐
       event.touches = [{
-        x: e.target.x - e.target.offsetLeft,
-        y: e.target.y - e.target.offsetTop
+        x: e.detail.x - e.target.offsetLeft,
+        y: e.detail.y - e.target.offsetTop
       }];
 
       canvasEl.dispatchEvent('click', event);
